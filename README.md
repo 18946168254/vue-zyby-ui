@@ -27,13 +27,14 @@ Vue.component(NoData.name, NoData);
 ```
 
 
-babel-plugin-component
+## babel-plugin-component
+
 安装
+
 npm i babel-plugin-component -D
 
-配置
-.babelrc
-
+配置.babelrc
+```javascript
 {
   "plugins": ["other-plugin", ["component", [
     { "libraryName": "vue-zyby-ui", "styleLibrary": {
@@ -42,7 +43,7 @@ npm i babel-plugin-component -D
                                         } }
   ]]]
 }
-
+```
 ## 注意事项
 部分组件css 使用了rem单位，以适配移动端。因此 使用本组件库前，所在项目应 进行适配改造。
 改造所用库：
