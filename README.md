@@ -16,14 +16,15 @@ import zybyUi from 'vue-zyby-ui'
 import 'vue-zyby-ui/dist/style.min.css'
 
 Vue.use(zybyUi);
+```
 
 导入指定组件. (用到 babel-plugin-component)
-
+```javascript
 import { CallPhone, NoData } from 'mint-ui';
 
 Vue.component(CallPhone.name, CallPhone);
 Vue.component(NoData.name, NoData);
-
+```
 
 
 babel-plugin-component
