@@ -1,16 +1,21 @@
 {
   "name": "vue-zyby-ui",
-  "version": "0.0.11",
+  "version": "0.0.15",
   "description": "A Vue.js project",
   "author": "zha <675486943@qq.com>",
   "private": false,
   "license": "MIT",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18946168254/vue-zyby-ui.git"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "build_all": "node build/build.js all"
+    "build_all": "node build/build.js all",
+    "build_pub": "npm run build && npm publish"
   },
   "dependencies": {
     "lib-flexible": "^0.3.2",

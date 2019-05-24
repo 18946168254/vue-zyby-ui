@@ -26,6 +26,7 @@
         default: 'custom', //自定义
         validator(value) {
           return [
+              'custom',
               'intro',
               'org',
               'school',
