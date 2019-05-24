@@ -8,9 +8,9 @@
   import { Button } from 'mint-ui'
 
   export default {
-    name: 'Back',
+    name: 'byBack',
     components: {
-      MtButton: Button
+      [Button.name]: Button
     },
     props: {
       specialBack: Function

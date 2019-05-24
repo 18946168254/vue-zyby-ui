@@ -18,7 +18,7 @@
   import { Actionsheet } from 'mint-ui'
 
   export default {
-    name: 'ImgUpload',
+    name: 'byImgUpload',
     props: {
       authId: String,
       imgUrl: String,

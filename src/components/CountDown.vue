@@ -58,7 +58,7 @@
         }
       },
     },
-    name: "CountDown",
+    name: "byCountDown",
     data: function () {
       return {
         end: this.endTime,

@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'NoData',
+    name: 'byNoData',
     data () {
       return {
       }

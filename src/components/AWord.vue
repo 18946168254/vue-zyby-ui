@@ -2,7 +2,7 @@
   <mt-popup class="mint-popup-modal" modal="false" v-model="visible" position="right">
     <div class="page-container">
       <mt-header fixed :title="pd.title">
-        <back slot="left" :specialBack="hidePage"></back>
+        <by-back slot="left" :specialBack="hidePage"></by-back>
         <span class="zyby-mint-header-right" slot="right" @click="finish">完成</span>
       </mt-header>
       <main class="container-margin-top-header">
@@ -16,7 +16,7 @@
   import Back from '@/components/Back.vue'
 
   export default {
-    name: 'AWord',
+    name: 'byAWord',
     props: {
       visible: Boolean,
       hideCb: Function,
@@ -38,10 +38,10 @@
       customModelOption: Object
     },
     components: {
-      Back,
-      MtHeader: Header,
-      MtField: Field,
-      MtPopup: Popup
+      [Back.name]: Back,
+      [Header.name]: Header,
+      [Field.name]: Field,
+      [Popup.name]: Popup
     },
     data () {
       return {

@@ -13,7 +13,7 @@
 
 <script>
   export default {
-    name: 'Stage',
+    name: 'byStage',
     props: [
       'curStage'
     ],

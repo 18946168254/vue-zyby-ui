@@ -16,7 +16,7 @@
    * 注：效果体验并不是太好，建议由后台传输 此项 图片。
    */
   export default {
-    name: 'ZVideo',
+    name: 'byZVideo',
     props: {
       videoUrl: String
     },

@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: 'Radio',
+    name: 'byRadio',
     props: {
       checkedChange: Function,
       radiosData: Array,
