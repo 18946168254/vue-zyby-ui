@@ -1,0 +1,272 @@
+@import './variable';
+@import './function';
+@import './mixin';
+
+html {
+  height: 100%;
+  font-family:  PingFangSC, DIN, Microsoft YaHei;
+}
+body *{
+  max-height: 999999px;
+  -webkit-touch-callout:none; /*系统默认菜单被禁用*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -khtml-user-select:none; /*早期浏览器*/
+  -moz-user-select:none;/*火狐*/
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+}
+body {
+  height: 100%;
+  font-size: @base-font-size !important;
+  color: @base-font-color;
+}
+a {
+  text-underline: none;
+}
+ul {
+  list-style: none;
+}
+/*设置IOS页面长按不可复制粘贴，但是IOS上出现input、textarea不能输入，因此将使用-webkit-user-select:auto;*/
+input,textarea {
+  -webkit-user-select:auto; /*webkit浏览器*/
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+p, ul, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.zyby-container {
+  padding: 0px @base-dom-lr-padding;
+}
+
+.box-sizing-border {
+  box-sizing: border-box;
+}
+.p_padding_bottom {
+  padding-bottom: @base-dom-lr-padding;
+}
+.float-right {
+  float: right;
+}
+.container-margin-top-header {
+  margin-top: @mint-header-height; /*no*/
+}
+.video-common {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+/*flex水平两侧*/
+.flex-between {
+  @flex-between()
+}
+/*flex纵向居中*/
+.flex-align-center {
+  @flex-align-center()
+}
+/*解决两侧字体不一致时，出现对不齐情形：一侧文本，一侧数字*/
+.flex-between-baseline {
+  @flex-between();
+  align-items: baseline;
+}
+
+/*flex纵向布局*/
+.flex-layout {
+  display: flex;
+  flex-direction: column;
+}
+.flex-layout-main {
+  flex: 1;
+  overflow: auto;
+}
+
+/* 按钮loading样式 */
+.zyby-btn-loading {
+  pointer-events: none;
+  position: relative;
+  > span {
+    vertical-align: middle;
+  }
+}
+.zyby-btn-loading::before {
+  position: absolute;
+  top: -1px;/*no*/
+  left: -1px;/*no*/
+  bottom: -1px;/*no*/
+  right: -1px;/*no*/
+  background: #f5f5f5;
+  opacity: .35;
+  content: "";
+  border-radius: inherit;
+  z-index: 1;
+  transition: opacity .2s;
+  pointer-events: none;
+}
+
+/*覆盖mint-ui样式*/
+.mint-header {
+  background-color: #fff;
+  color: rgba(62,74,89,0.45);
+  font-size: @base-font-size;
+  height: @mint-header-height;/*no*/
+}
+.mint-header-title {
+  font-family: PingFangSC-Medium;
+  font-size: 36px;
+  color: #000000;
+  text-align: center;
+  line-height: 50px;
+}
+.mint-header .mint-button {
+  color: rgba(62,74,89,0.45);
+  font-size: @base-font-size;
+}
+.mint-toast {
+  z-index: 3000 !important;
+}
+.mint-msgbox-btn {
+  font-size: @base-font-size;
+}
+.mint-header.is-fixed {
+  z-index: 2;
+}
+.mint-indicator-mask {
+  z-index: 3;
+}
+
+//popup 展示为modal
+.mint-popup-modal {
+  width: 100%;
+  height:100%;
+}
+
+//3d-picker ui
+.picker-operation {
+  background-color: #ffffff;
+  font-family: PingFangSC-Regular;
+  font-size: 30px;
+  padding: 18px @base-dom-lr-padding;
+  border-bottom: 1px solid #EEEEEE;/*no*/
+  span:first-child {
+    color: #999999;
+  }
+  span:last-child {
+    color: @base-finish-color;
+  }
+}
+.picker-backdrop /deep/ .picker-helper:before {
+  border-top-color: #EEEEEE;
+  border-bottom-color: #EEEEEE;
+}
+
+/* 波纹效果：适用于 点击组件 一直存在的情形*/
+.ripple {
+  position: relative;
+  //隐藏溢出的径向渐变背景
+  overflow: hidden;
+}
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  //设置径向渐变
+  background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .3s, opacity .5s;
+}
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  //设置初始状态
+  transition: 0s;
+}
+
+
+/* 项目特例*/
+@font-face {
+  font-family: DIN-Bold;
+  src: url('../fontFamily/DIN-Bold.otf')
+}
+.zyby-header {
+  @zyby-header();
+  padding-bottom: 20px;
+}
+.zyby-header-exist-mark {
+  @zyby-header();
+  padding-bottom: 10px;
+}
+.zyby-header-mark {
+  font-family: PingFangSC-Regular;
+  font-size: 20px;
+  color: rgba(0,10,9,0.40);
+  letter-spacing: 0;
+  line-height: 28px;
+}
+.zyby-mint-header-right {
+  font-family: PingFangSC-Regular;
+  font-size: 32px;
+  color: rgba(0,0,0,0.80);
+  text-align: right;
+}
+.zyby-footer-bt {
+  background: #FFFFFF;
+  box-shadow: 0 -1px 16px 0 rgba(0,0,0,0.06);
+  @flex-perfect-center();
+  height: 100px;
+}
+.zyby-form-field-label {
+  @zyby-form-field-label();
+}
+.zyby-form-radio-label {
+  @zyby-form-radio-label()
+}
+.zyby-form-field-placement {
+  @zyby-form-field-placement()
+}
+.zyby-img-upload-common {
+  height: 450px;
+  width: 100%;
+  margin-top: 26px;
+}
+.zyby-img-upload-small {
+  height: 185px;
+  width: 48%;
+  margin-top: 20px;
+}
+
+/* 简历填写-可删*/
+.zyby-resume-header {
+  padding: 40px 0 20px 0;
+  font-family: PingFangSC-Semibold;
+  font-size: 32px;
+  color: rgba(0,0,0,0.80);
+  letter-spacing: 0.64px;/*no*/
+}
+.zyby-resume-second-header {
+  padding-top: 30px;
+  padding-bottom: 27px;
+  font-family: PingFangSC-Semibold;
+  font-size: 24px;
+  color: rgba(0,10,9,0.40);
+}
+.zyby-resume-footer {
+  background: @base-finish-color;
+  box-shadow: 0 -1px 16px 0 rgba(0,0,0,0.06); /*no*/
+  @flex-perfect-center();
+  height: 100px;
+  color: #ffffff;
+}
+

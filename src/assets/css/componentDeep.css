@@ -1,0 +1,59 @@
+/**
+* 针对第三方样式组件，样式深入修改
+* 解决 ios 端， mintui field /deep/ 样式，需要组件页 二次导入的bug。
+*
+*/
+/* mint-ui field */
+.mint-field-custom:first-of-type /deep/ .mint-cell-wrapper {
+  background: none;
+}
+.mint-field-custom /deep/ .mint-cell-wrapper {
+  padding: 0;
+}
+.mint-field-custom /deep/ .mint-cell-text {
+  font-family: PingFangSC-Regular;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.8);
+  vertical-align: baseline;
+}
+.mint-field-custom /deep/ textarea {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  /*no*/
+  padding: 20px;
+}
+.mint-field-custom /deep/ input::-webkit-input-placeholder,
+.mint-field-custom /deep/ textarea::-webkit-input-placeholder {
+  font-family: PingFangSC-Regular;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.mint-field-custom /deep/ input {
+  font-family: PingFangSC-Regular;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8) !important;
+  line-height: 1;
+}
+.mint-field-input-true {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+.mint-field-input-none /deep/ input {
+  display: none;
+}
+.mint-field-slot-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mint-field-slot-more img {
+  height: 46px;
+  width: 46px;
+}
+.mint-field-slot-all /deep/ .mint-field-other {
+  width: 100%;
+}
+.mint-field-none-border /deep/ .mint-cell-wrapper,
+.mint-field-none-border.mint-cell:last-child {
+  background: none;
+}

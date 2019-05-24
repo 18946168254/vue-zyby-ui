@@ -1,0 +1,58 @@
+/**
+* 针对第三方样式组件，样式深入修改
+* 解决 ios 端， mintui field /deep/ 样式，需要组件页 二次导入的bug。
+*
+*/
+//mint-ui field自定义
+
+@import './mixin';
+@import './function';
+
+/* mint-ui field */
+.mint-field-custom {
+  &:first-of-type {
+    /deep/ .mint-cell-wrapper {
+      background: none;
+    }
+  }
+  /deep/ .mint-cell-wrapper {
+    padding: 0;
+  }
+  /deep/ .mint-cell-text {
+    @zyby-form-field-label();
+    vertical-align: baseline;
+  }
+  /deep/ textarea {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 6px; /*no*/
+    padding: 20px;
+  }
+  /deep/ input::-webkit-input-placeholder, /deep/ textarea::-webkit-input-placeholder {
+    @zyby-form-field-placement();
+  }
+  /deep/ input {
+    @zyby-form-field-placement();
+    @mint-field-input-true();
+    line-height: 1;
+  }
+}
+.mint-field-input-true {
+  @mint-field-input-true();
+}
+.mint-field-input-none /deep/ input {
+  display: none;
+}
+.mint-field-slot-more {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    .square-hw(46)
+  }
+}
+.mint-field-slot-all /deep/ .mint-field-other {
+  width: 100%;;
+}
+.mint-field-none-border /deep/ .mint-cell-wrapper, .mint-field-none-border.mint-cell:last-child {
+  background: none;
+}

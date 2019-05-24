@@ -1,0 +1,36 @@
+.square-hw(@height) {
+  height: @height* 1px;
+  width: @height* 1px;
+}
+.zyby-text-more-ellipsis(@lines, @is-inline:false) {
+  .displayVal() when (@is-inline) {
+    display: -webkit-inline-box;
+  }
+  .displayVal() when (@is-inline=false) {
+    display: -webkit-box;
+  }
+  .displayVal();
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:@lines;//当前块元素显示 文本行数
+  overflow: hidden;
+}
+.zyby-flex-justify(@position: center) {
+  display: flex;
+  justify-content: @position;
+}
+.zyby-relative-bottom-content-center(@bottom) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: @bottom* 1px;
+  text-align: center;
+}
+.zyby-fixed-bottom-bt(@height: 100) {
+  position: fixed;
+  bottom: 0px;
+  height: @height*1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

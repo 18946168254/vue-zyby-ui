@@ -1,0 +1,12 @@
+{
+  "base": "./src/base.js",
+  "AWord": "./src/components/AWord",
+  "Back": "./src/components/Back",
+  "CallPhone": "./src/components/CallPhone",
+  "CountDown": "./src/components/CountDown",
+  "ImgUpload": "./src/components/ImgUpload",
+  "NoData": "./src/components/NoData",
+  "Radio": "./src/components/Radio",
+  "Stage": "./src/components/Stage",
+  "ZVideo": "./src/components/ZVideo"
+}
