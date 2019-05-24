@@ -8,12 +8,12 @@
 npm i vue-zyby-ui -S
 
 ## Usage
-导入常用组件.
+导入全部组件.
 
 ```javascript
 import Vue from 'vue';
 import zybyUi from 'vue-zyby-ui'
-import 'vue-zyby-ui/dist/style.min.css'
+import 'vue-zyby-ui/theme/index.css'
 
 Vue.use(zybyUi);
 ```
@@ -36,13 +36,13 @@ npm i babel-plugin-component -D
 配置.babelrc
 ```javascript
 {
-  "plugins": ["other-plugin", ["component", [
-    { "libraryName": "vue-zyby-ui", "styleLibrary": {
-                                            "name": "theme",
-                                            "base": false
-                                        } }
-  ]]]
-}
+      "libraryName": "vue-zyby-ui",
+      "camel2Dash": false,
+      "styleLibrary": {
+        "name": "theme",
+        "base": true
+      }
+    },
 ```
 ## 注意事项
 部分组件css 使用了rem单位，以适配移动端。因此 使用本组件库前，所在项目应 进行适配改造。

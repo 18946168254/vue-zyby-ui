@@ -9,13 +9,17 @@ import Stage from './components/Stage.vue';
 import ZVideo from './components/ZVideo.vue';
 import './assets/css/base.less'
 
-// todo install 是用来 安装所有；
-// 另起一个 安装 通用；待验证 是否可行。主要是 样式.
-
 const install = function(Vue) {
   if (install.installed) return;
+  Vue.component(AWord.name, AWord)
   Vue.component(Back.name, Back)
+  Vue.component(CallPhone.name, CallPhone)
+  Vue.component(CountDown.name, CountDown)
+  Vue.component(ImgUpload.name, ImgUpload)
   Vue.component(NoData.name, NoData)
+  Vue.component(Radio.name, Radio)
+  Vue.component(Stage.name, Stage)
+  Vue.component(ZVideo.name, ZVideo)
 };
 
 export default {
