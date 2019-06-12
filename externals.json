@@ -1,0 +1,11 @@
+{
+  "vue": {
+    "root": "Vue",
+    "commonjs": "vue",
+    "commonjs2": "vue",
+    "amd": "vue"
+  },
+  "mintui": [
+    "actionsheet", "message-box", "toast", "header", "field", "popup", "button"
+  ]
+}

@@ -8,6 +8,8 @@
 npm i vue-zyby-ui -S
 
 ## Usage
+组件name 有统一前缀: by-, 例如<by-no-data></by-no-data>
+
 导入全部组件.
 
 ```javascript
@@ -20,7 +22,7 @@ Vue.use(zybyUi);
 
 导入指定组件. (用到 babel-plugin-component)
 ```javascript
-import { CallPhone, NoData } from 'mint-ui';
+import { CallPhone, NoData } from 'vue-zyby-ui';
 
 Vue.component(CallPhone.name, CallPhone);
 Vue.component(NoData.name, NoData);

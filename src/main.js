@@ -21,7 +21,10 @@ const install = function(Vue) {
   Vue.component(Stage.name, Stage)
   Vue.component(ZVideo.name, ZVideo)
 };
-
+// auto install
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+};
 export default {
   install,
   AWord,

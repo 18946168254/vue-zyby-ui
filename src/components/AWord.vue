@@ -13,7 +13,7 @@
 </template>
 <script>
   import { Toast, Header, Field, Popup } from 'mint-ui'
-  import Back from '@/components/Back.vue'
+  import Back from 'zyby-ui/components/Back.vue'
 
   export default {
     name: 'byAWord',

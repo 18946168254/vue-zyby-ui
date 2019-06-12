@@ -19,6 +19,7 @@ const entrys = {index: './src/main.js'}
 Object.keys(components).forEach(item => entrys[item] = components[item])
 
 const webpackConfig = merge(baseWebpackConfig, {
+  mode: 'production',
   entry: entrys,
   module: {
     rules: utils.styleLoaders({

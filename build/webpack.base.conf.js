@@ -23,7 +23,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      'zyby-ui': resolve('src'),
       '~': resolve('example'),
     }
   },
@@ -65,6 +65,7 @@ module.exports = {
       }
     ]
   },
+  externals: utils.getExternals(),
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).

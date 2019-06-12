@@ -1,20 +1,20 @@
 <template>
-    <div class="zyby-img-upload-common auth-img-item">
-      <div v-if="!imgUrl" @click="showUploadAction">
-        <img src="../assets/icon/btn_data_upload.png">
-        <div class="text-desc"><slot>上传图片</slot></div>
-      </div>
-      <img class="exist-img" v-else :src="imgUrl | imgPre" @click="showUploadAction">
-      <img class="img-delete" v-if="imgUrl && deleteFlag" src="../assets/icon/img_delete.png" @click="goDelete">
-      <mt-actionsheet
-        :actions="imgData.actions"
-        v-model="imgData.visible">
-      </mt-actionsheet>
+  <div class="zyby-img-upload-common auth-img-item">
+    <div v-if="!imgUrl" @click="showUploadAction">
+      <img src="../assets/icon/btn_data_upload.png">
+      <div class="text-desc"><slot>上传图片</slot></div>
+    </div>
+    <img class="exist-img" v-else :src="imgUrl | imgPre" @click="showUploadAction">
+    <img class="img-delete" v-if="imgUrl && deleteFlag" src="../assets/icon/img_delete.png" @click="goDelete">
+    <mt-actionsheet
+      :actions="imgData.actions"
+      v-model="imgData.visible">
+    </mt-actionsheet>
   </div>
 </template>
 
 <script>
-  import { Confirm } from '@/libs/popUtil.js'
+  import { Confirm } from 'zyby-ui/libs/popUtil.js'
   import { Actionsheet } from 'mint-ui'
 
   export default {
