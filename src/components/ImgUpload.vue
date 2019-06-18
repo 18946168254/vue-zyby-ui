@@ -1,5 +1,5 @@
 <template>
-  <div class="zyby-img-upload-common auth-img-item">
+  <div class="zyby-img-upload-common auth-img-item" :class="{'img-item-special': !imgUrl}">
     <div v-if="!imgUrl" @click="showUploadAction">
       <img src="../assets/icon/btn_data_upload.png">
       <div class="text-desc"><slot>上传图片</slot></div>
@@ -69,8 +69,6 @@
   }
   .auth-img-item {
     position: relative;
-    border: 1px dashed #13DBBF;/*no*/
-    border-radius: 6px;/*no*/
     > div:first-child {
         height: 100%;
         @flex-perfect-center();
@@ -95,5 +93,9 @@
       top: 10px;
       right: 10px;
     }
+  }
+  .img-item-special {
+    border: 1px dashed #13DBBF;/*no*/
+    border-radius: 6px;/*no*/
   }
 </style>
