@@ -15,7 +15,7 @@ npm i vue-zyby-ui -S
 ```javascript
 import Vue from 'vue';
 import zybyUi from 'vue-zyby-ui'
-import 'vue-zyby-ui/theme/index.css'
+import 'vue-zyby-ui/lib/theme/index.css'
 
 Vue.use(zybyUi);
 ```

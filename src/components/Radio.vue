@@ -36,7 +36,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less" rel="stylesheet/less">
-  @radio-height: 26px;
+  @radio-height: 25px;
 
   input[type="radio"] + span::before {
     content: ""; /*不换行空格*/

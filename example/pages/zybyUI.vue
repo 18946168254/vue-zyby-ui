@@ -3,7 +3,7 @@
     <h1>zyby-ui</h1>
     <call-phone phone="18946168254"></call-phone>
     <back></back>
-    <button @click="pd.tagInputVisible = true">展示aword</button>
+    <button zyby-uiclick="pd.tagInputVisible = true">展示aword</button>
     <hr>
     <hr>
     <count-down :endTime="pd.endTime"></count-down>
@@ -23,13 +23,13 @@
 
 <script>
 
-  import CallPhone from '@/components/CallPhone.vue'
-  import Back from '@/components/Back.vue'
-  import AWord from '@/components/AWord.vue'
-  import CountDown from '@/components/CountDown.vue'
-  import ImgUpload from '@/components/ImgUpload.vue'
-  import Radio from '@/components/Radio.vue'
-  import Stage from '@/components/Stage.vue'
+  import CallPhone from 'zyby-ui/components/CallPhone.vue'
+  import Back from 'zyby-ui/components/Back.vue'
+  import AWord from 'zyby-ui/components/AWord.vue'
+  import CountDown from 'zyby-ui/components/CountDown.vue'
+  import ImgUpload from 'zyby-ui/components/ImgUpload.vue'
+  import Radio from 'zyby-ui/components/Radio.vue'
+  import Stage from 'zyby-ui/components/Stage.vue'
 
   export default {
     components: {

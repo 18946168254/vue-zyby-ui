@@ -1,5 +1,44 @@
 <template>
   <span>
+    <template v-if="model === 'noDay'">
+      <span class="zyby-count-down">
+        {{show.hr}}<slot name="hrUnit">小时</slot>
+      </span>
+      <span class="zyby-count-down">
+        {{show.min}}<slot name="minUnit">分钟</slot>
+      </span>
+      <span class="zyby-count-down">
+        {{show.sec}}<slot name="secUnit">秒</slot>
+      </span>
+    </template>
+    <template v-else-if="model === 'onlySec'">
+      <span class="zyby-count-down">
+        {{show.sec}}<slot name="secUnit">秒</slot>
+      </span>
+    </template>
+    <template v-else-if="model === 'validateCode'">
+      <span v-show="showCodeText" class="code-text" @click="getCode">获取验证码</span>
+      <span v-show="!showCodeText" class="code-count-down">
+        {{show.sec}}<slot name="secUnit">秒</slot>
+      </span>
+    </template>
+    <template v-else>
+      <span class="zyby-count-down">
+        {{show.day}}<slot name="dayUnit">天</slot>
+      </span>
+      <span class="zyby-count-down">
+        {{show.hr}}<slot name="hrUnit">小时</slot>
+      </span>
+      <span class="zyby-count-down">
+        {{show.min}}<slot name="minUnit">分钟</slot>
+      </span>
+      <span class="zyby-count-down">
+        {{show.sec}}<slot name="secUnit">秒</slot>
+      </span>
+    </template>
+  </span>
+<!--
+  <span>
     <span v-if="model === 'noDay'">
       <span class="zyby-count-down">
         {{show.hr}}<slot name="hrUnit">小时</slot>
@@ -37,6 +76,7 @@
       </span>
     </span>
   </span>
+-->
 </template>
 
 <script>
@@ -156,6 +196,5 @@
   }
 </script>
 <style scoped>
-  .zyby-count-down{}
 
 </style>
