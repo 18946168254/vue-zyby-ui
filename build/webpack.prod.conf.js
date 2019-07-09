@@ -28,6 +28,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       usePostCSS: true
     })
   },
+  externals: utils.getExternals(),
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   // output: {
   //   path: config.build.assetsRoot,

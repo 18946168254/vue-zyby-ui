@@ -64,5 +64,8 @@
     height: @radio-height;
     line-height: @radio-height;
     width: 190px;
+    label {
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
   }
 </style>

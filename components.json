@@ -7,6 +7,8 @@
   "ImgUpload": "./src/components/ImgUpload",
   "NoData": "./src/components/NoData",
   "Radio": "./src/components/Radio",
+  "ScrollHideFooter": "./src/components/ScrollHideFooter",
   "Stage": "./src/components/Stage",
+  "Sticky": "./src/components/Sticky",
   "ZVideo": "./src/components/ZVideo"
 }
