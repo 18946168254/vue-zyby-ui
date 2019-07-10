@@ -4,6 +4,7 @@ import 'lib-flexible'
 import zybyUI from '~/pages/zybyUI'
 import scrollHidden from '~/pages/scrollHidden'
 import stickyTest from '~/pages/stickyTest'
+import previewerTest from '~/pages/previewerTest'
 
 Vue.use(Router)
 
@@ -11,6 +12,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'previewerTest',
+      component: previewerTest
+    },
+    {
+      path: '/stickyTest',
       name: 'stickyTest',
       component: stickyTest
     },

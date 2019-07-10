@@ -6,15 +6,18 @@
     </div>
     <img class="exist-img" v-else :src="imgUrl | imgPre" @click="showUploadAction">
     <img class="img-delete" v-if="imgUrl && deleteFlag" src="../assets/icon/img_delete.png" @click="goDelete">
-    <mt-actionsheet
-      :actions="imgData.actions"
-      v-model="imgData.visible">
-    </mt-actionsheet>
+    <div v-transfer-dom>
+      <mt-actionsheet
+        :actions="imgData.actions"
+        v-model="imgData.visible">
+      </mt-actionsheet>
+    </div>
   </div>
 </template>
 
 <script>
   import { Confirm } from 'zyby-ui/libs/popUtil.js'
+  import TransferDom from 'zyby-ui/directives/transfer-dom'
   import { Actionsheet } from 'mint-ui'
 
   export default {
@@ -26,6 +29,9 @@
       startShowAction: Function,
       startDelete: Function,
       imgActions: Array
+    },
+    directives: {
+      TransferDom
     },
     components: {
       MtActionsheet: Actionsheet

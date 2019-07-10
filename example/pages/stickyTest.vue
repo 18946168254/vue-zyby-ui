@@ -24,6 +24,7 @@
 <script>
   /**
    * 使用须知：
+   * https://doc.vux.li/zh-CN/components/sticky.html
    *
    * 代码来自于vux的 sticky 组件，所以使用 和 原组件基本一致
    * 1、props介绍

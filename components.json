@@ -6,6 +6,7 @@
   "CountDown": "./src/components/CountDown",
   "ImgUpload": "./src/components/ImgUpload",
   "NoData": "./src/components/NoData",
+  "Previewer": "./src/components/Previewer",
   "Radio": "./src/components/Radio",
   "ScrollHideFooter": "./src/components/ScrollHideFooter",
   "Stage": "./src/components/Stage",
