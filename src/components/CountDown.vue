@@ -196,5 +196,5 @@
   }
 </script>
 <style scoped>
-
+  span{}
 </style>

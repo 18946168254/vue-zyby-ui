@@ -37,7 +37,10 @@
    * a、scroll-box 指定了滚动容器，默认 window（但是有个问题，切换页面的时候，需要移除基于window的滚动事件）。
    * 所以最好直接指定，要求：height:100%，overflow：auto
    * b、sticky组件建议外层加一个div高度为内容高度，这样可以避免当定位为sticky时下面的元素会突然向上走。
-   *
+   * c、由于存在数据延迟加载的情形，sticky块之前的元素 高度可能会有变化， 此时需要在 设置数据后，重新绑定
+   * this.$nextTick(() => {
+          this.$refs.sticky.bindSticky()
+        })
    */
 
 

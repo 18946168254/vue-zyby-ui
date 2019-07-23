@@ -5,10 +5,10 @@
 </template>
 
 <script>
-  import sticky from './sticky'
+  import sticky from '../libs/stickyUtil.js'
 
   export default {
-    name: 'Sticky',
+    name: 'bySticky',
     props: ['scrollBox', 'offset', 'checkStickySupport', 'disabled'],
     data () {
       return {
@@ -49,7 +49,7 @@
   }
 </script>
 
-<style lang="less">
+<style lang="less" rel="stylesheet/less">
 
   .vux-sticky-box {
     z-index: 1;

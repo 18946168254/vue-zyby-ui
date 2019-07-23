@@ -4,6 +4,7 @@
   "Back": "./src/components/Back",
   "CallPhone": "./src/components/CallPhone",
   "CountDown": "./src/components/CountDown",
+  "CountUp": "./src/components/CountUp",
   "ImgUpload": "./src/components/ImgUpload",
   "NoData": "./src/components/NoData",
   "Previewer": "./src/components/Previewer",
