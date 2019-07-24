@@ -9,8 +9,10 @@
   "NoData": "./src/components/NoData",
   "Previewer": "./src/components/Previewer",
   "Radio": "./src/components/Radio",
+  "Range": "./src/components/Range",
   "ScrollHideFooter": "./src/components/ScrollHideFooter",
   "Stage": "./src/components/Stage",
   "Sticky": "./src/components/Sticky",
+  "Video": "./src/components/Video",
   "ZVideo": "./src/components/ZVideo"
 }
