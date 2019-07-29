@@ -8,18 +8,24 @@ import previewerTest from '~/pages/previewerTest'
 import countup from '~/pages/countup'
 import videoTest from '~/pages/videoTest'
 import rangeTest from '~/pages/rangeTest'
+import qrcode from '~/pages/qrcode'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
+      path: '/',
+      name: 'qrcode',
+      component: qrcode
+    },
+    {
       path: '/rangeTest',
       name: 'rangeTest',
       component: rangeTest
     },
     {
-      path: '/',
+      path: '/videoTest',
       name: 'videoTest',
       component: videoTest
     },

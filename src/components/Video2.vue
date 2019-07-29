@@ -1,14 +1,15 @@
 <template>
   <div class="video-player-box">
-    <video ref="videoHandle" :src="videoUrl" :poster="poster" style="display: inline" webkit-playsinline playsinline x5-playsinline x5-video-player-fullscreen="true"
-           @play="onPlayerPlay($event)"
-           @pause="onPlayerPause($event)"
-           @timeupdate="onPlayerTimeupdate($event)"
-           @loadedmetadata="onPlayerLoadedmetadata($event)"
+    <div class="play-container">
+      <video ref="videoHandle" :src="videoUrl" :poster="poster"  style="display: inline" webkit-playsinline playsinline x5-playsinline x5-video-player-fullscreen="true"
+             @play="onPlayerPlay($event)"
+             @pause="onPlayerPause($event)"
+             @timeupdate="onPlayerTimeupdate($event)"
+             @loadedmetadata="onPlayerLoadedmetadata($event)"
 
-    >
-      您的浏览器不支持 video 标签。
-    </video>
+      >您的浏览器不支持 video 标签。
+      </video>
+    </div>
     <div class="bg" v-if="bgVisible" :style="{background: `black url(${poster}) no-repeat center/auto 100%`}">
       <img src="../assets/img/btn_vedio_play@2x.png" @click="playVideo">
     </div>
@@ -151,10 +152,20 @@
 <style scoped lang="less" rel="stylesheet/less">
   @import "../assets/css/function.less";
   @import "../assets/css/mixin.less";
+
   .video-player-box {
     width: 100%;
     height: 400px;
     position: relative;
+    .player-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      z-index: 1;
+      background: #000;
+    }
     video {
       width: 100%;
       height: 100%;
@@ -173,7 +184,7 @@
       }
     }
     .control {
-      /*position: absolute;*/
+      position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
@@ -181,6 +192,7 @@
       background: #fbf9fe;
       display: flex;
       align-items: center;
+      z-index: 81;
       .control-range {
         flex: 1;
       }

@@ -8,6 +8,7 @@
   "ImgUpload": "./src/components/ImgUpload",
   "NoData": "./src/components/NoData",
   "Previewer": "./src/components/Previewer",
+  "Qrcode": "./src/components/Qrcode",
   "Radio": "./src/components/Radio",
   "Range": "./src/components/Range",
   "ScrollHideFooter": "./src/components/ScrollHideFooter",
