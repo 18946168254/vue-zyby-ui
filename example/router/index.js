@@ -9,6 +9,8 @@ import countup from '~/pages/countup'
 import videoTest from '~/pages/videoTest'
 import rangeTest from '~/pages/rangeTest'
 import qrcode from '~/pages/qrcode'
+import progress from '~/pages/progress'
+import grid from '~/pages/grid'
 
 Vue.use(Router)
 
@@ -16,6 +18,16 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'grid',
+      component: grid
+    },
+    {
+      path: '/progress',
+      name: 'progress',
+      component: progress
+    },
+    {
+      path: '/qrcode',
       name: 'qrcode',
       component: qrcode
     },
